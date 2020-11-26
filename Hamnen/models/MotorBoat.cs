@@ -11,7 +11,7 @@ namespace Hamnen.models
 
     class MotorBoat : Boat, IMotorBoat
     {
-        public MotorBoat(string id, int weight, int maxSpeed, int dockSize, int daysRemaining, int power) : base(id, weight, maxSpeed, dockSize, daysRemaining)
+        public MotorBoat(string id, int weight, int maxSpeed, int dockSize, int daysRemaining, string type, int power) : base(id, weight, maxSpeed, dockSize, daysRemaining, type)
         {
             Power = power;
         }

@@ -37,7 +37,7 @@ namespace Hamnen.utilities
             // Generate a number of random boat types with coresponding data
             for(var i = 0; i < nrBoats; i++)
             {
-                string id;
+                string id, type;
                 int weight, maxSpeed, dockSize, daysRemaining;
 
                 var boatType = generator.RandomNumber(1, 4);
@@ -48,8 +48,9 @@ namespace Hamnen.utilities
                     maxSpeed = generator.RandomNumber(0, 61);
                     dockSize = 1;
                     daysRemaining = 3;
+                    type = "Motorbåt";
                     var power = generator.RandomNumber(10, 1001);
-                    boats.Add(new MotorBoat(id, weight, maxSpeed, dockSize, daysRemaining, power));
+                    boats.Add(new MotorBoat(id, weight, maxSpeed, dockSize, daysRemaining, type, power));
                 }
                 else if (boatType == 2) // Sailboat
                 {
@@ -58,8 +59,9 @@ namespace Hamnen.utilities
                     maxSpeed = generator.RandomNumber(0, 13);
                     dockSize = 2;
                     daysRemaining = 4;
+                    type = "Segelbåt";
                     var length = generator.RandomNumber(10, 61);
-                    boats.Add(new SailBoat(id, weight, maxSpeed, dockSize, daysRemaining, length));
+                    boats.Add(new SailBoat(id, weight, maxSpeed, dockSize, daysRemaining, type, length));
                 }
                 else if (boatType == 3) // Containerboat
                 {
@@ -68,8 +70,9 @@ namespace Hamnen.utilities
                     maxSpeed = generator.RandomNumber(0, 21);
                     dockSize = 4;
                     daysRemaining = 6;
+                    type = "Lastfartyg";
                     var containers = generator.RandomNumber(0, 501);
-                    boats.Add(new ContainerBoat(id, weight, maxSpeed, dockSize, daysRemaining, containers));
+                    boats.Add(new ContainerBoat(id, weight, maxSpeed, dockSize, daysRemaining, type, containers));
                 }
             }
 

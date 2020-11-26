@@ -11,7 +11,7 @@ namespace Hamnen.models
 
     class ContainerBoat : Boat, IContainerBoat
     {
-        public ContainerBoat(string id, int weight, int maxSpeed, int dockSize, int daysRemaining, int containers) : base(id, weight, maxSpeed, dockSize, daysRemaining)
+        public ContainerBoat(string id, int weight, int maxSpeed, int dockSize, int daysRemaining, string type, int containers) : base(id, weight, maxSpeed, dockSize, daysRemaining, type)
         {
             Containers = containers;
         }

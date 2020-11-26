@@ -11,7 +11,7 @@ namespace Hamnen.models
 
     class SailBoat : Boat, ISailBoat
     {
-        public SailBoat(string id, int weight, int maxSpeed, int dockSize, int daysRemaining, int length) : base(id, weight, maxSpeed, dockSize, daysRemaining)
+        public SailBoat(string id, int weight, int maxSpeed, int dockSize, int daysRemaining, string type, int length) : base(id, weight, maxSpeed, dockSize, daysRemaining, type)
         {
             Length = length;
         }
